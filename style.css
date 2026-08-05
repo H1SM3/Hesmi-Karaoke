@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: #1e1e1e;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #1db954;
+}
+
+button {
+  background: #1db954;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1ed760;
+}
+
+.player-section {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#track-title {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+audio {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#lyrics-container {
+  height: 150px;
+  overflow-y: auto;
+  background: #282828;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lyric-line {
+  color: #b3b3b3;
+  transition: 0.3s;
+}
+
+.lyric-line.active {
+  color: #1db954;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.upload-section {
+  background: #282828;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.upload-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+#upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#upload-form label {
+  font-size: 0.85rem;
+  color: #b3b3b3;
+}
+
+#upload-form input, #upload-form textarea {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #121212;
+  color: #fff;
+}
+
+#upload-form button {
+  margin-top: 5px;
+}
+
+.playlist-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+#track-list {
+  list-style: none;
+}
+
+#track-list li {
+  padding: 12px;
+  background: #282828;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#track-list li:hover {
+  background: #333;
+}
