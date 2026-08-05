@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Караоке с Хесми</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Firebase SDK (Compat версия) -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎤 Караоке с Хесми</h1>
+      <button id="auth-btn">Войти через Google</button>
+    </header>
+
+    <main>
+      <section class="player-section">
+        <div id="track-title">Выберите трек</div>
+        <audio id="audio-player" controls></audio>
+        <div id="lyrics-container">
+          <p class="lyric-line active">Выберите песню для старта...</p>
+        </div>
+      </section>
+
+      <section id="upload-section" class="upload-section" style="display: none;">
+        <h2>Добавить новый трек 🎵</h2>
+        <form id="upload-form">
+          <input type="text" id="artist-input" placeholder="Исполнитель" required>
+          <input type="text" id="title-input" placeholder="Название песни" required>
+          <label for="audio-file">Аудиофайл (MP3):</label>
+          <input type="file" id="audio-file" accept="audio/*" required>
+          <textarea id="lrc-input" placeholder="Вставь LRC-текст с таймкодами здесь... [00:12.34] Слова песни" rows="5"></textarea>
+          <button type="submit" id="upload-btn">Загрузить трек</button>
+        </form>
+      </section>
+
+      <section class="playlist-section">
+        <h2>Список треков</h2>
+        <ul id="track-list"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
