@@ -10,8 +10,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* Если есть картинка из папки images/bg.jpg, раскомментируй строку ниже */
-    /* background: url('images/bg.jpg') no-repeat center center/cover; */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
